@@ -1,13 +1,13 @@
 /*
- * standaartprogramma voor de ultrasone afstandsensor
+ * standaardprogramma voor de ultrasone afstandsensor
  */
 
 task main()
 {
-  SetSensorLowspeed (S4);
-  OnFwd (OUT_AC,50);
-  while(SensorUS(S4) > 20);
+  SetSensorLowspeed (S4);     //start sensor
+  OnFwd (OUT_AC,50);          //rij vooruit
+  while(SensorUS(S4) > 20);   //zolang de afstand kleiner is dan 20cm
   {
-   Off(OUT_AC);
+   OnRev(OUT_AC, 50);         //rij achteruit
   }
 }
