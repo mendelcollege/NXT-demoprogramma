@@ -1,0 +1,23 @@
+/*
+ * rij vooruit als de tijd is minder dan 5 seconden
+ * rij achteruit als de tijd meer is dan 5 seconden
+ */
+
+task main()
+{
+ float begin;
+ float nu;
+ begin = CurrentTick();
+ while (true)
+ {
+ nu = CurrentTick() - begin;
+  if(nu < 5000)
+  {
+   OnFwd(OUT_AC, 50);
+  }
+  if(nu > 5000)
+  {
+   OnRev(OUT_AC, 50);
+  }
+ }
+}

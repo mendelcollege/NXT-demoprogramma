@@ -1,0 +1,19 @@
+/*
+ * rij vooruit zolang hij geen zwart ziet
+ */
+
+task main()
+{
+ SetSensorLight(S2);
+ while(true)
+ {
+  if(SENSOR_2 > 50) //50 is in dit geval iets boven zwart
+  {
+   OnFwd(OUT_AC, 50);
+  }
+  if(SENSOR_2 < 50) //50 is in dit geval iets boven zwart
+  {
+   OnRev(OUT_AC, 50);
+  }
+ }
+}
