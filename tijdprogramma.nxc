@@ -1,23 +1,22 @@
 /*
- * rij vooruit als de tijd is minder dan 5 seconden
- * rij achteruit als de tijd meer is dan 5 seconden
+ * standaardprogramma voor de ultrasone tijdtikker
  */
 
 task main()
 {
- float begin;
- float nu;
- begin = CurrentTick();
- while (true)
- {
- nu = CurrentTick() - begin;
-  if(nu < 5000)
+  float begin;                     //maak decimaal getal genaamd "begin"
+  float nu;                        //maak decimaal getal genaamd "nu"
+  begin = CurrentTick();           //begin staat gelijk aan huidige tijd
+  while(true)                      //start oneindige loop
   {
-   OnFwd(OUT_AC, 50);
+    nu = CurrentTick() - begin;    //nu staat gelijk aan "huidige tijd - begin"
+    if(nu < 5000)                  //als nu kleiner is dan 5sec
+    {
+      OnFwd(OUT_AC, 50);           //rij vooruit
+    }
+    if(nu > 5000)                  //als nu groter is dan 5sec
+    {
+     OnRev(OUT_AC, 50);            //rij achteruit
+    }
   }
-  if(nu > 5000)
-  {
-   OnRev(OUT_AC, 50);
-  }
- }
 }
