@@ -5,12 +5,12 @@
 task main()
 {
 	SetSensorLowspeed(S4);     		//start sensor
-	while(true)                 	//start oneindige loop
+	while(true)                 		//start oneindige loop
 	{
-		OnFwd (OUT_AC,50);          //rij vooruit
-		while(SensorUS(S4) > 20);   //zolang de afstand kleiner is dan 20cm (let op omgedraaid "<"-teken)
+		OnFwd (OUT_AC,50);      	 //rij vooruit
+		while(SensorUS(S4) > 20)	 //zolang de afstand kleiner is dan 20cm (let op omgedraaid "<"-teken)
 		{
-			OnRev(OUT_AC, 50);        //rij achteruit
+			OnRev(OUT_AC, 50);       //rij achteruit
 		}
 	}
 }
