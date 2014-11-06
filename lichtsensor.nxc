@@ -1,19 +1,16 @@
 /*
- * rij vooruit zolang hij geen zwart ziet
+ * standaardprogramma voor de reflectiesensor
  */
 
 task main()
 {
- SetSensorLight(S2);
- while(true)
- {
-  if(SENSOR_2 > 50) //50 is in dit geval iets boven zwart
+  SetSensorLight(S2);         	//start sensor
+  while(true)                 	//start oneindige loop
   {
-   OnFwd(OUT_AC, 50);
+    OnFwd (OUT_AC,50);          //rij vooruit
+    while(SENSOR_2 < 50);       //zolang de reflectie kleiner is dan 50
+    {
+      OnRev(OUT_AC, 50);        //rij achteruit
+    }
   }
-  if(SENSOR_2 < 50) //50 is in dit geval iets boven zwart
-  {
-   OnRev(OUT_AC, 50);
-  }
- }
 }
