@@ -1,16 +1,16 @@
 /*
- * rij vooruit zolang de touchsensor niet word ingedrukt
+ * standaardprogramma voor de druksensor
  */
 
 task main()
 {
- while(true)
- {
-  SetSensorTouch(S1);
-  OnFwd(OUT_AC, 50);
-  while(SENSOR_1 != 0) // != betekend is niet
+  SetSensorTouch(S1);          //start druksensor
+  while(true)                  //start oneindige loop
   {
-   OnRev(OUT_AC, 50);
+    OnFwd(OUT_AC, 50);         //rij vooruit
+    while(SENSOR_1 == 1)       //zolang de sensor ingedrukt is
+    {
+      OnRev(OUT_AC, 50);       //rij achteruit
+    }
   }
- }
 }
