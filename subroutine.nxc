@@ -5,7 +5,7 @@
  * nadat een subroutine klaar is gaat de code in de task weer verder
  * het is verstandig subroutines boven de task te plaatsen die hem oproept
  *
- * gevordere programmeurs zal het opvallen dat dit een void is (tip: dat is het ook)
+ * gevorderde programmeurs zal het opvallen dat dit een void is (tip: dat is het ook)
  *
  */
 
