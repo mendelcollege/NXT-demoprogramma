@@ -1,0 +1,27 @@
+/*
+ * standaardprogramma voor de bediening van de infrarood sensor
+ * 
+ * 'Dir' staat voor richting, er zijn 5 richtingen mogelijk.
+ * 's' staat voor de signaalsterkte, deze is (meestal) recht evenredig met de afstand
+ */
+
+
+//een effectievere maar praktisch overbodige mannier om text en getallen achter elkaar te zetten
+#define TextNumOut(xPos,yPos,str,col,num)  TextOut(xPos,yPos,str); NumOut(xPos+6*col,yPos,num)
+
+task main()
+{
+  int dir, s1, s2, s3, s4, s5, result;							
+  SetSensorLowspeed(IN_1);
+  while(true)
+  {
+    ReadSensorHTIRSeeker2AC(IRSEEKER, dir, s1, s2, s3, s4, s5);
+    TextNumOut(0, LCD_LINE3, "Dir:    ",4,dir);
+    TextNumOut(6, LCD_LINE4, "S1:     ",3,s1);
+    TextNumOut(6, LCD_LINE5, "S2:     ",3,s2);
+    TextNumOut(6, LCD_LINE6, "S3:     ",3,s3);
+    TextNumOut(6, LCD_LINE7, "S4:     ",3,s4);
+    TextNumOut(6, LCD_LINE8, "S5:     ",3,s5);
+    Wait(100);
+  }
+}
