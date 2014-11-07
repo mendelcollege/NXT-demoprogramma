@@ -14,5 +14,6 @@ task main()
     OnFwd(OUT_AC, 50);                     //rij vooruit
     Wait(500);                             //wacht 0,5 seconden
     Off(OUT_AC);                           //stop motoren
+    Wait(500);
   }
 }
