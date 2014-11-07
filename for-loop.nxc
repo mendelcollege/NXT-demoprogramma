@@ -1,0 +1,18 @@
+/*
+ * standaardprogramma voor for-loops
+ * een for-loop is een uitgebreidere while-loop
+ *
+ * dit programma laat de robot 10 keer een klein stukje vooruit rijden
+ */
+
+ // for(geef een lege variable; herhaal totdat; variable een bepaalde waarde heeft)
+
+task main()
+{
+  for(int x = 1; x < 10; x++)              //start for-loop        let op: x++ betekent x+1=x en x-- betekent x-1=x
+  {
+    OnFwd(OUT_AC, 50);                     //rij vooruit
+    Wait(500);                             //wacht 0,5 seconden
+    Off(OUT_AC);                           //stop motoren
+  }
+}

@@ -1,0 +1,25 @@
+/*
+ * standaardprogramma voor de subroutine
+ *
+ * een subroutine is een klein stukje code dat opgreoepen kan worden
+ * nadat een subroutine klaar is gaat de code in de task weer verder
+ * het is verstandig subroutines boven de task te plaatsen die hem oproept
+ *
+ * gevordere programmeurs zal het opvallen dat dit een void is (tip: dat is het ook)
+ *
+ */
+
+sub draai_rondje()
+{
+  OnFwd(OUT_A, 50);                   //rij vooruit met motor A
+  OnRev(OUT_C, 50);                   //rij achteruit met motor B
+  Wait(500);                          //wacht een halfe seconde
+}
+
+task main()
+{
+  OnFwd(OUT_AC, 50);                  //rij vooruit
+  Wait(1000);                         //wacht 1 seconde
+  draai_rondje();                     //start subroutine "draai_rondje()"
+  Off(OUT_AC);                        //stop
+}

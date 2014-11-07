@@ -1,0 +1,23 @@
+Bluetooth
+Door: Mees Brinkhuis
+
+
+Bluetooth is een van de moeilijkere dingen om te doen met de NXT.
+Mijn advies: gebruik het niet tenzij niet anders mogelijk.
+
+let op: bluetooth is onvoorspelbaar, en bij wedstrijden vaak verboden.
+
+hoe te gebruiken:
+
+1. Verbind de robots via bluetooth, gebruik hiervoor het menu.
+   Er is 1 robot waarmee je de ander uit een lijst selecteert, en er is 1 robot die geselecteerd wordt.
+   De robot waarmee je selecteert is de "master", de robot die geselcteerd wordt is de "slave".
+   Onthoud welke robot welke is.
+   Onthoud ook welke connectie je hebt gebruikt. (1 t/m 9)
+
+2. Draai op de master het master-programma, en het slave-programma op de slave.
+   Zorg ervoor dat je de connectie checkt (zie programma).
+   Zorg ervoor dat de INBOX, en UITBOX overeenkomen, oftewel precies andersom bij de slave. (UITBOX van master = INBOX van slave)
+   Zorg ervoor dat de slave "SendResponseNumber()" gebruikt. (zie programma)
+
+Er is meer informatie te vinden over bluetooth in het tabblad "Help" van BricxCC.

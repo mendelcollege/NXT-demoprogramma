@@ -1,0 +1,12 @@
+/*
+ * standaardprogramma voor de until() functionaliteit
+ * de until() functie wacht totdat hetgeen tussen de haakjes waar is voordat het verder gaat
+ */
+ 
+task main()
+{
+  SetSensorTouch(S1);             //start aanraaksensor
+  OnFwd(OUT_AC, 50);              //rij vooruit
+  until(SENSOR_1 == 1);           //totdat aanraaksensor aangeraakt wordt
+  Off(OUT_AC);                    //stop
+}

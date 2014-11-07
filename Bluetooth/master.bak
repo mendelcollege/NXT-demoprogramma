@@ -1,0 +1,35 @@
+
+/*
+ * standaard programma voor bluetooth connectie
+ * (voor uitleg zie: uitleg.txt)
+ *
+ *
+
+
+
+*/
+
+#define CONNECTIE 1
+#define INBOX 1
+#define UITBOX 2
+
+task main()
+{
+  int master = 0;
+  int slave;
+  if (BluetoothStatus(CONNECTIE) != NO_ERR)
+  {
+    TextOut(5,LCD_LINE2,"Error");
+    Wait(1000);
+    Stop(true);
+  }
+  while(true)
+  {
+    ReceiveRemoteNumber(INBOX, true, slave);
+    SendRemoteNumber(UITBOX, true, master);
+    NumOut(10, LCD_LINE1, in);
+    NumOut(10, LCD_LINE2, uit);
+    Wait(100);
+    in++;
+  }
+}

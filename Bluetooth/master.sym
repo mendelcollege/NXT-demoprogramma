@@ -1,0 +1,266 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__signed_stack_001main	6	1	0	4	12
+1	__RRNTmpVal	6	1	4	4	4
+2	__D0main	6	1	8	4	14
+3	__SRSTmpLongVal	6	1	12	4	2
+4	__signed_stack_002main	6	1	16	4	10
+5	__Wait_7qG2_ms_7qG2_000_inline_main	5	1	20	4	2
+6	__main_7qG2_master_7qG2_000	4	1	24	2	5
+7	__main_7qG2_slave_7qG2_000	4	1	26	2	2
+8	__WFRRTmpByte	1	1	28	1	2
+9	____initialize_global_data_return	1	1	29	1	3
+10	__constVal4	2	0	30	1	2
+11	__constVal3	2	0	31	1	1
+12	__constVal1	2	0	32	1	5
+13	__constVal5	2	0	33	1	1
+14	__zfmain	1	1	34	1	5
+15	__RRNErr	1	1	35	1	1
+16	__constVal2	2	0	36	1	4
+17	__MRArgs	8	0	4	8	5
+18	__MRArgs.Result	2	1	40	1	5
+19	__MRArgs.QueueID	1	1	41	1	5
+20	__MRArgs.Remove	1	1	42	1	5
+21	__MRArgs.Message	7	0	44	4	5
+22	__MRArgs.Message.Message_type	1	0	0	1	0
+23	__TextOutArgs	8	0	4	16	25
+24	__TextOutArgs.Result	2	1	48	1	25
+25	__TextOutArgs.Location	8	0	2	4	25
+26	__TextOutArgs.Location.X	4	1	52	2	25
+27	__TextOutArgs.Location.Y	4	1	54	2	25
+28	__TextOutArgs.Text	7	0	56	4	25
+29	__TextOutArgs.Text.Text_type	1	0	0	1	0
+30	__TextOutArgs.Options	5	1	60	4	25
+31	__CBTCSArgs	8	0	2	4	3
+32	__CBTCSArgs.Result	2	1	64	1	3
+33	__CBTCSArgs.Connection	1	1	65	1	3
+34	__CHSWArgs	8	0	2	8	3
+35	__CHSWArgs.Status	2	1	68	1	3
+36	__CHSWArgs.Buffer	7	0	70	4	3
+37	__CHSWArgs.Buffer.Buffer_type	1	0	0	1	0
+38	__CBTWArgs	8	0	3	8	4
+39	__CBTWArgs.Result	2	1	72	1	4
+40	__CBTWArgs.Connection	1	1	73	1	4
+41	__CBTWArgs.Buffer	7	0	74	4	4
+42	__CBTWArgs.Buffer.Buffer_type	1	0	0	1	0
+43	__constStr0011	7	0	76	4	1
+44	__constStr0011.__constStr0011_type	1	1	0	1	0
+45	__constStr0010	7	0	78	4	1
+46	__constStr0010.__constStr0010_type	1	1	0	1	0
+47	__constStr0009	7	0	80	4	1
+48	__constStr0009.__constStr0009_type	1	1	0	1	0
+49	__SRSSendBuf	7	0	82	4	3
+50	__SRSSendBuf.__SRSSendBuf_type	1	0	0	1	0
+51	__SRSTmpBuf	7	0	84	4	6
+52	__SRSTmpBuf.__SRSTmpBuf_type	1	0	0	1	0
+53	__SRSFlattenBuf	7	0	86	4	2
+54	__SRSFlattenBuf.__SRSFlattenBuf_type	1	0	0	1	0
+55	__strbufmain	7	0	88	4	6
+56	__strbufmain.__strbufmain_type	1	0	0	1	0
+57	__DCMessageWritePacket	7	0	90	4	1
+58	__DCMessageWritePacket.__DCMessageWritePacket_type	1	0	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	17	0	#line 17 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	18	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	17	2	#line 17 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	18	2	#line 18 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	19	2		set __main_7qG2_master_7qG2_000, 0
+0	18	5	#line 18 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	19	5	#line 19 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	20	5	#pragma macro 5
+0	20	5		mov __CBTCSArgs.Connection, __constVal1
+0	20	7		syscall 28, __CBTCSArgs
+0	20	10		mov __signed_stack_001main, __CBTCSArgs.Result
+0	5800	12	#line 5800 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	19	12	#line 19 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	20	12	#line 20 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	21	12		set __D0main, 0
+0	20	15	#line 20 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	21	15		cmp 5, __zfmain, __signed_stack_001main, __D0main
+0	20	19	#line 20 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	21	19		mov __D0main, __zfmain
+0	21	21	#line 21 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	21		brtst 4, __NXC_Label_608, __zfmain
+0	21	24	#line 21 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	24		set __signed_stack_001main, 5
+0	21	27	#line 21 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	21	27	#line 21 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	27		set __signed_stack_002main, 48
+0	21	30	#line 21 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	21	30	#line 21 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	30		strcat __strbufmain, __constStr0009
+0	22	34	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	34	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	34		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	22	36	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	36		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	22	38	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	38		set __TextOutArgs.Options, 0
+0	22	41	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	41		mov __TextOutArgs.Text, __strbufmain
+0	22	43	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	43		syscall 13, __TextOutArgs
+0	22	46	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	46	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	46	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	22	46	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	46		set __Wait_7qG2_ms_7qG2_000_inline_main, 1000
+0	22	49	#line 22 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	7921	49	#line 7921 "NXCDefs.h"
+0	7922	49		wait 1000
+0	7921	51	#line 7921 "NXCDefs.h"
+0	23	51	#line 23 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	23	51	#line 23 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	24	51		set __D0main, 1
+0	24	54	#line 24 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	25	54		stop __D0main
+0	24	56	#line 24 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	25	56	#line 25 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	26	56	#line 26 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	27	56		set __D0main, 1
+0	27	59	#line 27 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	28	59		tst 5, __zfmain, __D0main
+0	27	62	#line 27 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	28	62		brtst 4, __NXC_Label_618, __zfmain
+0	27	65	#line 27 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	28	65	#pragma macro 9
+0	28	65		mov __MRArgs.QueueID, __constVal1
+0	28	67		mov __MRArgs.Remove, __constVal1
+0	28	69		set __RRNTmpVal, 0
+0	28	72		syscall 27, __MRArgs
+0	28	75		unflatten __RRNTmpVal, __RRNErr, __MRArgs.Message, __RRNTmpVal
+0	28	80		mov __main_7qG2_slave_7qG2_000, __RRNTmpVal
+0	28	82		mov __D0main, __MRArgs.Result
+0	5877	84	#line 5877 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	27	84	#line 27 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	27	84	#line 27 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	28	84	#line 28 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	29	84	#pragma macro 25
+0	29	84		mov __SRSTmpBuf, __DCMessageWritePacket
+0	29	86		replace __SRSTmpBuf, __SRSTmpBuf, __constVal2, __constVal1
+0	29	91		replace __SRSTmpBuf, __SRSTmpBuf, __constVal3, __constVal5
+0	29	96		mov __SRSTmpLongVal, __main_7qG2_master_7qG2_000
+0	29	98		flatten __SRSFlattenBuf, __SRSTmpLongVal
+0	29	101		arrbuild __SRSSendBuf, __SRSTmpBuf, __SRSFlattenBuf
+0	29	106		brcmp 0, __ConnWrite_Else0, __constVal2, __constVal4
+0	29	110		sub __WFRRTmpByte, __constVal2, __constVal4
+0	29	114		arrbuild __CHSWArgs.Buffer, __WFRRTmpByte, __SRSSendBuf
+0	29	119		syscall 37, __CHSWArgs
+0	29	122		mov __D0main, __CHSWArgs.Status
+0	29	124		jmp __ConnWrite_EndIf0
+0	29	126		mov __CBTWArgs.Connection, __constVal2
+0	29	128		mov __CBTWArgs.Buffer, __SRSSendBuf
+0	29	130		syscall 29, __CBTWArgs
+0	29	133		mov __D0main, __CBTWArgs.Result
+0	5881	135	#line 5881 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	28	135	#line 28 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	28	135	#line 28 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	29	135	#line 29 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	135		set __signed_stack_001main, 1
+0	29	138	#line 29 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	29	138	#line 29 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	138		set __signed_stack_002main, 56
+0	29	141	#line 29 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	29	141	#line 29 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	141		strcat __strbufmain, __constStr0010
+0	30	145	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	145	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	145		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	30	147	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	147		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	30	149	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	149		set __TextOutArgs.Options, 0
+0	30	152	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	152		mov __TextOutArgs.Text, __strbufmain
+0	30	154	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	154		syscall 13, __TextOutArgs
+0	30	157	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	157	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	157	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	157	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	157		set __signed_stack_001main, 10
+0	30	160	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	160	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	160		set __signed_stack_002main, 56
+0	30	163	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	30	163	#line 30 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	163		mov __D0main, __main_7qG2_master_7qG2_000
+0	31	165	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	165	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	165		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	31	167	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	167		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	31	169	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	169		set __TextOutArgs.Options, 0
+0	31	172	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	172		numtostr __TextOutArgs.Text, __D0main
+0	31	175	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	175		syscall 13, __TextOutArgs
+0	31	178	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	178	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	178	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	178	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	178		set __signed_stack_001main, 1
+0	31	181	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	181	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	181		set __signed_stack_002main, 48
+0	31	184	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	31	184	#line 31 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	184		strcat __strbufmain, __constStr0011
+0	32	188	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	188	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	188		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	32	190	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	190		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	32	192	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	192		set __TextOutArgs.Options, 0
+0	32	195	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	195		mov __TextOutArgs.Text, __strbufmain
+0	32	197	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	197		syscall 13, __TextOutArgs
+0	32	200	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	200	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	200	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	200	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	200		set __signed_stack_001main, 10
+0	32	203	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	203	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	203		set __signed_stack_002main, 48
+0	32	206	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	32	206	#line 32 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	206		mov __D0main, __main_7qG2_slave_7qG2_000
+0	33	208	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	208	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	34	208		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	33	210	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	34	210		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	33	212	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	34	212		set __TextOutArgs.Options, 0
+0	33	215	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	34	215		numtostr __TextOutArgs.Text, __D0main
+0	33	218	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	34	218		syscall 13, __TextOutArgs
+0	33	221	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	221	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	221	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	33	221	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	34	221		set __Wait_7qG2_ms_7qG2_000_inline_main, 100
+0	33	224	#line 33 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	7921	224	#line 7921 "NXCDefs.h"
+0	7922	224		wait 100
+0	7921	226	#line 7921 "NXCDefs.h"
+0	34	226	#line 34 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	35	226	#line 35 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	36	226		add __main_7qG2_master_7qG2_000, __main_7qG2_master_7qG2_000, __constVal1
+0	35	230	#line 35 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	38	230	#line 38 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	39	230		jmp __NXC_Label_617
+0	38	232	#line 38 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+0	39	232		exit -1, -1
+1	39	0	#line 39 "C:\Users\Mees\AppData\Local\Temp\temp.nxc"
+1	40	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Mees\AppData\Local\Temp\temp.nxc
+1	__initialize_global_data	235	C:\Users\Mees\AppData\Local\Temp\temp.nxc

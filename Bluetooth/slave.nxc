@@ -1,0 +1,35 @@
+
+/*
+ * standaard programma voor bluetooth connectie
+ * (voor uitleg zie: uitleg.txt)
+ *
+ * verbind de robots eerst op connectie 1
+ * dit programma laat zien hoe je waardes tussen master en slave kan uitwisselen
+*/
+
+#define CONNECTIE 1
+#define INBOX 2
+#define UITBOX 1
+
+task main()
+{
+  int master;
+  int slave = 0;                                       //waarde slave = 0
+  if (BluetoothStatus(CONNECTIE) != NO_ERR)            //als er geen verbinding is
+  {
+    TextOut(5,LCD_LINE2,"Error");                      //zet Error op het scherm
+    Wait(1000);                                        //wacht 1 seconde
+    Stop(true);                                        //stop het programma
+  }
+  while(true)
+  {
+    ReceiveRemoteNumber(INBOX, true, master);          //ontvang de waarde van master
+    SendResponseNumber(UITBOX, slave);                 //stuur de waarde van slave        let op: bij slave moet je "SendResponseNumber()" gebruiken deze heeft geen true in het midden
+    TextOut(1, LCD_LINE1,"Master:");                   //print text
+    NumOut(10, LCD_LINE1, master);                     //print waarde van master
+    TextOut(1, LCD_LINE2, "slave:");                   //print text
+    NumOut(10, LCD_LINE2, slave);                      //print waarde van slave
+    Wait(100);                                         //wacht 0,1 seconde
+    slave++;                                           //verhoog waarde slave met 1
+  }
+}
