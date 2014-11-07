@@ -9,7 +9,7 @@
 
 task main()
 {
-  for(int x = 1; x < 10; x++)              //start for-loop        let op: x++ betekent x+1=x en x-- betekent x-1=x
+  for(int x = 1; x < 10; x++)              //start for-loop        let op: x++ betekent x=x+1 en x-- betekent x=x-1
   {
     OnFwd(OUT_AC, 50);                     //rij vooruit
     Wait(500);                             //wacht 0,5 seconden
