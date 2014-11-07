@@ -4,6 +4,7 @@
 
 #include "HTSMUX-driver.h"
 //zet deze (HTSMUX-driver.h) in het mapje "C:\Program Files (x86)\BricxCC"
+//http://botbench.com/blog/2010/04/09/released-nxc-driver-for-hitechnic-sensor-mux/
 
 //deze demo heeft nog aandacht nodig, maar ik heb geen zin meer
 
