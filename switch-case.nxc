@@ -12,7 +12,7 @@ task main()
   {
     switch(tel)                           //start switch-case met als variabele "tel"
     {
-	  case 0:                             //als tel 0 is
+      case 0:                             //als tel 0 is
         OnFwd(OUT_AC, 50);                //rij voouit
         break;                            //stop case
       case 1:                             //als tel 1 is
