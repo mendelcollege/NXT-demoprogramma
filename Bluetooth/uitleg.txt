@@ -19,5 +19,8 @@ hoe te gebruiken:
    Zorg ervoor dat je de connectie checkt (zie programma).
    Zorg ervoor dat de INBOX, en UITBOX overeenkomen, oftewel precies andersom bij de slave. (UITBOX van master = INBOX van slave)
    Zorg ervoor dat de slave "SendResponseNumber()" gebruikt. (zie programma)
+   
+   
+Je kan meerdere slaves aan een master toevoegen, maar elke slave kan maar 1 master hebben.
 
 Er is meer informatie te vinden over bluetooth in het tabblad "Help" van BricxCC.

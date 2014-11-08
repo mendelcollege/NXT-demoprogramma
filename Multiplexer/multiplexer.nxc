@@ -5,7 +5,6 @@
  * Het is aan te raden BricxCC op een usb te zetten, dan heb je geen toestemming van de ICT nodig
  * http://botbench.com/blog/2010/04/09/released-nxc-driver-for-hitechnic-sensor-mux/
  *
- *
  */
  
 //smuxSensorLegoUS(msensor_S"poort in NXT"_"poort in multiplexer");
@@ -15,10 +14,10 @@
 task main () 
 {
   byte afstand = 0;                                 //maak variable voor sensorwaarde
-  SetSensor(S1, SENSOR_LOWSPEED);                   //start afstandsensor (let op: SENSOR_LOWSPEED moet voor elke  soort sensor)
+  SetSensor(S1, SENSOR_LOWSPEED);                   //start multiplexer (let op: SENSOR_LOWSPEED moet voor elke  soort sensor)
   while (true)                                      //start oneindige loop
   {
-    afstand = smuxSensorLegoUS(msensor_S1_1);       //geef "afstand" de waarde van de sensor 
+    afstand = smuxSensorLegoUS(msensor_S1_1);       //geef "afstand" de waarde van de afstandsensor op poort 1
     NumOut(0, LCD_LINE3, afstand);                  //print afstand op het scherm
     Wait(100);                                      //wacht 0,1 seconden
   }

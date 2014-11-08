@@ -1,0 +1,37 @@
+/*
+ * standaardprogramma voor de switch-case functie
+ *
+ * een switch case is een alterntief voor een "if"
+ * je kan, als je maar 1 variabele bekijkt, meer taken uitvoeren met minder code
+ */
+
+task main()
+{
+  int tel = 0;                            //variable "tel" is 0
+  while(true)                             //start oneindige loop
+  {
+    switch(tel)                           //start switch-case met als variabele "tel"
+    {
+	  case 0:                             //als tel 0 is
+        OnFwd(OUT_AC, 50);                //rij voouit
+        break;                            //stop case
+      case 1:                             //als tel 1 is
+        Off(OUT_AC);                      //stop
+        break;                            //stop case
+      case 3:
+        OnRev(OUT_AC, 50);
+        break;
+      case 5:
+        Off(OUT_AC);
+        tel = 0;
+        break;
+      default:                            //als tel geen van de bovengenoemde waarden is
+        TextOut(0, LCD_LINE3, "ERROR");   //print ERROR op het scherm
+        Wait(1000);                       //wacht 1 seconde
+        Stop(true);                       //stop het programma
+        break;
+    }
+    Wait(1000);                           //wacht 1 seconde (let op: deze wordt na elke case uitgevoerd)
+    tel = tel + 1;
+  }
+}
