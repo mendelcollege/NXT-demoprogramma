@@ -1,5 +1,5 @@
 /*
- * standaardprogramma voor de subroutine
+ * standaardprogramma voor meerdere tasks
  *
  * een task is een stuk code dat opgreoepen kan worden.
  * nadat een task klaar is gaat de code in de originele task niet verder, deze moet opniew opgroepen worden, anders stopt het programma.
@@ -21,5 +21,5 @@ task main()
 {
   OnFwd(OUT_AC, 50);                  //rij vooruit
   Wait(1000);                         //wacht 1 seconde
-  draai_rondje();                     //start subroutine "draai_rondje()"
+  draai_rondje();                     //start task "draai_rondje()"
 }
