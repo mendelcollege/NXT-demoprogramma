@@ -1,0 +1,25 @@
+/*
+ * standaardprogramma voor de subroutine
+ *
+ * een task is een stuk code dat opgreoepen kan worden.
+ * nadat een task klaar is gaat de code in de originele task niet verder, deze moet opniew opgroepen worden, anders stopt het programma.
+ * het is verstandig kleine tasks boven de task te plaatsen die hem oproept.
+ *
+ * gevorderde programmeurs zal het opvallen dat dit een function is (tip: dat is het ook)
+ *
+ */
+
+task draai_rondje()
+{
+  OnFwd(OUT_A, 50);                   //rij vooruit met motor A
+  OnRev(OUT_C, 50);                   //rij achteruit met motor B
+  Wait(500);                          //wacht een halfe seconde
+  Off(OUT_AC);                        //stop
+}
+
+task main()
+{
+  OnFwd(OUT_AC, 50);                  //rij vooruit
+  Wait(1000);                         //wacht 1 seconde
+  draai_rondje();                     //start subroutine "draai_rondje()"
+}
