@@ -18,19 +18,19 @@ task main()
       case 1:                             //als tel 1 is
         Off(OUT_AC);                      //stop
         break;                            //stop case
-      case 3:
+      case 2:
         OnRev(OUT_AC, 50);
         break;
-      case 5:
+      case 3:
         Off(OUT_AC);
-        tel = 0;
+        tel = -1;                         //zet tel op -1 (zodat hij weer nul word bij de volgende ronde)
         break;
       default:                            //als tel geen van de bovengenoemde waarden is
-        TextOut(0, LCD_LINE3, "ERROR");   //print ERROR op het scherm
-        Wait(1000);                       //wacht 1 seconde
-        Stop(true);                       //stop het programma
+        TextOut(0, LCD_LINE3, "ERROR");   //print het nummer van tel op het scherm
+        tel = -1;
         break;
     }
+    NumOut(0, LCD_LINE3, tel);            //print het nummer van tel op het scherm
     Wait(1000);                           //wacht 1 seconde (let op: deze wordt na elke case uitgevoerd)
     tel = tel + 1;
   }
