@@ -65,13 +65,13 @@ void HTEnhancedIRSeekerV2(const byte  port, int &dir, int &strength)
 
 task main()
 {
-  int dir, s5;              			 n                      			//maak variabelen voor het opslaan van de gemeten waarden
-  SetSensorLowspeed(IN_1);				                        			//start de infraroodsensor, aangesloten op poort 1
-  while(true)								                                  	//start oneindige loop
+  int richting, afstand;              			      //maak variabelen voor het opslaan van de gemeten waarden
+  SetSensorLowspeed(IN_1);				      //start de infraroodsensor, aangesloten op poort 1
+  while(true)                                                 //start oneindige loop
   {
-    HTEnhancedIRSeekerV2(IN_1, dir, s1);		                  	//meet waarden van poort 1 en sla ze op
-    TextNumOut(0, LCD_LINE3, "Dir:    ",4,dir);
-    TextNumOut(6, LCD_LINE4, "St:     ",3,s1);
-    Wait(100);			                                 						//wacht 10ms
+    HTEnhancedIRSeekerV2(IN_1, richting, afstand);            //meet waarden van poort 1 en sla ze op
+    TextNumOut(0, LCD_LINE3, "Dir:    ",4, richting);         //print richting
+    TextNumOut(6, LCD_LINE4, "St:     ",3, afstand);          //print afstand
+    Wait(100);                                                //wacht 10ms
   }
 }
