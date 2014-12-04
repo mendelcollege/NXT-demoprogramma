@@ -26,9 +26,9 @@ task main()
     ReceiveRemoteNumber(INBOX, true, slave);           //ontvang de waarde van slave
     SendRemoteNumber(CONNECTIE, UITBOX, master);       //stuur de waarde van master
     TextOut(1, LCD_LINE1,"Master:");                   //print text
-    NumOut(10, LCD_LINE1, master);                     //print waarde van master
+    NumOut(70, LCD_LINE1, master);                     //print waarde van master
     TextOut(1, LCD_LINE2, "slave:");                   //print text
-    NumOut(10, LCD_LINE2, slave);                      //print waarde van slave
+    NumOut(70, LCD_LINE2, slave);                      //print waarde van slave
     Wait(100);                                         //wacht 0,1 seconde
     master++;                                          //verhoog waarde master met 1
   }
