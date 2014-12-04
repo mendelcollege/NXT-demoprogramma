@@ -24,7 +24,7 @@ task main()
   while(true)
   {
     ReceiveRemoteNumber(INBOX, true, slave);           //ontvang de waarde van slave
-    SendRemoteNumber(UITBOX, true, master);            //stuur de waarde van master
+    SendRemoteNumber(CONNECTIE, UITBOX, master);       //stuur de waarde van master
     TextOut(1, LCD_LINE1,"Master:");                   //print text
     NumOut(10, LCD_LINE1, master);                     //print waarde van master
     TextOut(1, LCD_LINE2, "slave:");                   //print text
