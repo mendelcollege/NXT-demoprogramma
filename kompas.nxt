@@ -1,0 +1,10 @@
+/*
+ * standaardprogramma voor het kompas
+ */
+
+task main(){
+   SetSensorLowspeed(S1);                           //stel sensor 1 in als digitale sensor
+   while(true){
+      NumOut(0, LCD_LINE3, SensorHTCompass(S1));    //print een nummer op het scherm met het kompas als variabele
+   }
+}
