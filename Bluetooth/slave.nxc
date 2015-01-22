@@ -7,7 +7,7 @@
  * dit programma laat zien hoe je waardes tussen master en slave kan uitwisselen
 */
 
-#define CONNECTIE 1
+#define CONNECTIE 0
 #define INBOX 2
 #define UITBOX 1
 
