@@ -14,6 +14,7 @@ int ReceiveBTValue(int queue)
             if(error == NULL)
             {
                 return value;
+                break;  //?
             }
             Wait(10);
         }
