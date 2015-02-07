@@ -6,7 +6,7 @@
  * dit programma laat zien hoe je waardes tussen master en slave kan uitwisselen
 */
 
-#define CONNECTIE 0
+#define CONNECTION 0
 #define SLAVEQUEUE 2
 #define MASTERQUEUE 1
 
