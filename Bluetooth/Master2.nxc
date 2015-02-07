@@ -7,7 +7,7 @@
 int ReceiveBTValue(int queue)
     {
         int value;
-        int error;
+        char error;
         while(true)
         {
             error = ReceiveRemoteNumber(queue, true, value);
@@ -29,10 +29,7 @@ task main()
         
         while(true)
             {
-                if(BluetoothStatus(CONNECTION) != NO_ERR)
-                    {
-                        TextOut(5,LCD_LINE1, "BLOETOETERROR");
-                    }
+                if(BluetoothStatus(CONNECTION) != NO_ERR) TextOut(5,LCD_LINE1, "BLOETOETERROR");
                 SendRemoteNumber(CONNECTION, SLAVEQUEUE, master);
                 slave = ReceiveBTValue(MASTERQUEUE);
                 NumOut(70, LCD_LINE1, master);
