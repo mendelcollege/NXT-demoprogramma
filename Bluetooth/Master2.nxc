@@ -1,4 +1,10 @@
-//Verbeterde versie
+/*
+ * standaard programma voor bluetooth connectie
+ * (voor uitleg zie: uitleg.txt)
+ *
+ * verbind de robots eerst op connectie 1
+ * dit programma laat zien hoe je waardes tussen master en slave kan uitwisselen
+*/
 
 #define CONNECTION 1
 #define MASTERQUEUE 1
