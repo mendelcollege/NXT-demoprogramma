@@ -1,0 +1,48 @@
+
+/*
+ * standaard programma voor bluetooth connectie
+ * (voor uitleg zie: uitleg.txt)
+ *
+ * verbind de robots eerst op connectie 1
+ * dit programma laat zien hoe je waardes tussen master en slave kan uitwisselen
+*/
+
+#define CONNECTIE 0
+#define SLAVEQUEUE 2
+#define MASTERQUEUE 1
+
+int ReceiveBTValue(int queue)
+    {
+        int value;
+        char error;
+        while(true)
+        {
+            error = ReceiveRemoteNumber(queue, true, value);
+            if(error == NULL)
+            {
+                return value;
+                break;  //?
+            }
+            Wait(10);
+        }
+    }
+
+task main()
+    {
+        int master;
+        int slave = 0;
+        
+        TextOut(5, LCD_LINE1,"Slave:");
+        TextOut(5, LCD_LINE2, "Master:");
+        
+        while(true)
+            {
+                if(BluetoothStatus(CONNECTION) != NO_ERR) TextOut(5,LCD_LINE1, "BLOETOETERROR");
+                SendResponseNumber(MASTERQUEUE, master);
+                slave = ReceiveBTValue(SLAVEQUEUE);
+                NumOut(70, LCD_LINE1, slave);
+                NumOut(70, LCD_LINE2, master);
+                Wait(100);
+                slave++;
+            }
+    }
