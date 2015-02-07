@@ -1,5 +1,5 @@
 Bluetooth
-Door: Mees Brinkhuis
+Door: Mees Brinkhuis && Bram Mak
 
 
 Bluetooth is een van de moeilijkere dingen om te doen met de NXT.
@@ -11,16 +11,23 @@ hoe te gebruiken:
 
 1. Verbind de robots via bluetooth, gebruik hiervoor het menu.
    Er is 1 robot waarmee je de ander uit een lijst selecteert, en er is 1 robot die geselecteerd wordt.
-   De robot waarmee je selecteert is de "master", de robot die geselcteerd wordt is de "slave".
+   De robot waarmee je selecteert is de "master", de robot die geselecteerd wordt is de "slave".
    Onthoud welke robot welke is.
-   Onthoud ook welke connectie je hebt gebruikt. (1 t/m 9)
+   Onthoud ook welke connectie je hebt gebruikt. (1 t/m 3)
 
 2. Draai op de master het master-programma, en het slave-programma op de slave.
    Zorg ervoor dat je de connectie checkt (zie programma).
    Zorg ervoor dat de INBOX, en UITBOX overeenkomen, oftewel precies andersom bij de slave. (UITBOX van master = INBOX van slave)
-   Zorg ervoor dat de slave "SendResponseNumber()" gebruikt. (zie programma)
-   
+   Zorg ervoor dat de slave "SendResponseNumber()" gebruikt. (zie programma) (Er moet nog getest worden of SendRemoteNumber(0,...) werkt)
+   Gebruik een errorcheckmechanisme, anders krijg je de helft van de tijd een nul als waarde.
+   Dit kun je doen door te kijken of de returnwaarde NULL is.
+   Het is aangeraden dat je alles in een functie samenvat (zie 'ReceiveBTValue' in programma)
    
 Je kan meerdere slaves aan een master toevoegen, maar elke slave kan maar 1 master hebben.
+Connectie 0 is het connectienummer voor de slave.
+Connecties 1-3 zijn de connectienummers voor de master.
+In het programma van je slave gebruik je het connectienummer 0.
+In het programma van je master gebruik je de connectienummers 1-3. (Het nummer van de connectie die je gebruikt hebt.)
+
 
 Er is meer informatie te vinden over bluetooth in het tabblad "Help" van BricxCC.
