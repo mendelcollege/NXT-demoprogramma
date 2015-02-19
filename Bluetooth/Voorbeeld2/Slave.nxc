@@ -1,0 +1,47 @@
+//Slave
+#define CONNECTION 0
+#define QUEUETOUCH 0
+#define QUEUEMOTOR 1
+
+task main()
+{
+ int motorvalue;
+ int touchvalue;
+ char error;
+ SetSensorTouch(IN_1);
+ while(true)
+ {
+ 
+  //Check Connection
+  if(BluetoothStatus(CONNECTION) != NO_ERR)
+  {
+   TextOut(5,LCD_LINE1, "HELP");
+  }
+  else
+  {
+   TextOut(5, LCD_LINE1, "GOED");
+  }
+
+  //Read & Send Value
+  touchvalue=SENSOR_1;
+  NumOut(5,LCD_LINE2, touchvalue);
+  SendResponseNumber(QUEUETOUCH, touchvalue);
+  
+  //Receive & Do Value
+  error = ReceiveRemoteNumber(QUEUEMOTOR, true, motorvalue);
+
+  if (error == NULL)
+  {
+   NumOut(5, LCD_LINE3, error);
+   NumOut(5, LCD_LINE4, motorvalue);
+   OnFwd(OUT_AC, motorvalue);
+  }
+  if (error == '@')
+  {
+  }
+  
+  Wait(50);
+
+ }
+}
+
