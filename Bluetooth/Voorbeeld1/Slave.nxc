@@ -10,7 +10,7 @@
 #define SLAVEQUEUE 2
 #define MASTERQUEUE 1
 
-int ReceiveBTValue(int queue)
+int ReceiveBTValue(byte queue)
     {
         int value;
         char error;
