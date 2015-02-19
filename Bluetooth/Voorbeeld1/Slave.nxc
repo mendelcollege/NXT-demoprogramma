@@ -36,7 +36,7 @@ task main()
         
         while(true)
             {
-                if(BluetoothStatus(CONNECTION) != NO_ERR) TextOut(5,LCD_LINE1, "BLOETOETERROR");
+                if(BluetoothStatus(CONNECTION) != NO_ERR) TextOut(5,LCD_LINE3, "BLOETOETERROR");
                 SendResponseNumber(MASTERQUEUE, master);
                 slave = ReceiveBTValue(SLAVEQUEUE);
                 NumOut(70, LCD_LINE1, slave);
