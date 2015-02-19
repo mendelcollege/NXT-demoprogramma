@@ -1,0 +1,51 @@
+//Master
+#define CONNECTION 0x1
+#define QUEUETOUCH 0
+#define QUEUEMOTOR 1
+
+int TouchSensor()
+ {
+  int value;
+  ReceiveRemoteNumber(QUEUETOUCH, true, value);
+  return value;
+ }
+
+task main()
+{
+
+ //Create variable
+ SetSensorTouch(IN_1);
+ int touchvalue;
+ char error;
+ TextOut(5,LCD_LINE3, "TouchSensor:");
+
+ while(true)
+ {
+  //Check Connection
+  if(BluetoothStatus(CONNECTION) != NO_ERR)
+  {
+   TextOut(5,LCD_LINE2,"Bloetoetoeter");
+
+  }
+  else
+  {
+   TextOut(5,LCD_LINE2, "JEEEEEEEEEEEE");
+  }
+  
+  //Receive & Print Value
+  error = ReceiveRemoteNumber(QUEUETOUCH, true, touchvalue);
+  if(error == NULL)
+  {
+   NumOut(80,LCD_LINE3, touchvalue);
+  }
+  
+  //Send Value
+  if(SENSOR_1 == 1) {SendRemoteNumber(CONNECTION, QUEUEMOTOR, 100);}
+  else {SendRemoteNumber(CONNECTION, QUEUEMOTOR, 0);}
+  
+  Wait(50);
+  
+ }
+}
+
+
