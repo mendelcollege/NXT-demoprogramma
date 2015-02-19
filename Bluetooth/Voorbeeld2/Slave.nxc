@@ -36,9 +36,6 @@ task main()
    NumOut(5, LCD_LINE4, motorvalue);
    OnFwd(OUT_AC, motorvalue);
   }
-  if (error == '@')
-  {
-  }
   
   Wait(50);
 
