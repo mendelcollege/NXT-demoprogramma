@@ -2,7 +2,7 @@
  * standaardprogramma voor meerdere tasks
  *
  * een task is een stuk code dat opgreoepen kan worden.
- * nadat een task klaar is gaat de code in de originele task niet verder, deze moet opniew opgroepen worden, anders stopt het programma.
+ * nadat een task klaar is gaat de code in de originele task niet verder (als je ExitTo gebruikt), deze moet opniew opgroepen worden, anders stopt het programma.
  * het is verstandig kleine tasks boven de task te plaatsen die hem oproept.
  *
  * gevorderde programmeurs zal het opvallen dat dit een function is (tip: dat is het ook)
@@ -17,9 +17,22 @@ task draai_rondje()
   Off(OUT_AC);                        //stop
 }
 
+task hello_world()
+{
+  while(true)
+  {	
+  	TextOut(5,LCD_LINE2, "Hallo");
+  	Wait(500);
+  	TextOut(5,LCD_LINE2,"Doei ");
+  	Wait(500);
+  }
+}
+
 task main()
 {
+  start hello_world;
   OnFwd(OUT_AC, 50);                  //rij vooruit
-  Wait(1000);                         //wacht 1 seconde
+  Wait(5000);                         //wacht 1 seconde
+  stop hello_world;
   ExitTo(draai_rondje);               //start task "draai_rondje()"
 }
