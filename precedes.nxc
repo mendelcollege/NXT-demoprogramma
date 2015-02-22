@@ -17,7 +17,7 @@ task draai_rondje()
 
 task hello_world()
 {
-	TextOut(5,LCD_LINE2, "Hallo Idioten"
+	TextOut(5,LCD_LINE2, "Hallo Idioten");
 	Wait(3000);
 }
 
