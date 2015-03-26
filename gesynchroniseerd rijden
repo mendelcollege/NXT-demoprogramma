@@ -1,0 +1,13 @@
+/*
+ * standaardprogramma voor gesynchroniseerd rijden
+ * Dit programma stopt de ene moter, zodra de andere vastgehouden wordt.
+ * Op deze manier kan hij rechter rijden dan normaal.
+ *
+ * Let op, dit werkt niet in een loop, alleen met een Wait() of Until() functie.
+ */ 
+
+task main()
+{
+  OnFwdSync(OUT_AC, 50, 10);      //gesynchroniseerd rijden ("motoren", "snelheid", "hoek");
+  Wait(2000);                     //wacht 2 seconden
+}
