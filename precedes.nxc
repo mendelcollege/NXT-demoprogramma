@@ -1,11 +1,10 @@
 /*
-  Standaardprogramma voor de precedes functie
-  Door: Bram Mak
-  Precedes doet het omgekeerde van Follows.
-  
-  Als task main klaar is, worden draai_rondje en hello_world tegelijkertijd uitgevoerd.
-  In tegenstelling tot Follows, wordt dus nu main éérst uitgevoerd.
-*/
+ * Standaardprogramma voor de precedes functie
+ * Precedes doet het omgekeerde van Follows.
+ * 
+ * Als task main klaar is, worden draai_rondje en hello_world tegelijkertijd uitgevoerd.
+ * In tegenstelling tot Follows, wordt dus nu main éérst uitgevoerd.
+ */
 
 task draai_rondje()
 {
@@ -17,13 +16,13 @@ task draai_rondje()
 
 task hello_world()
 {
-	TextOut(5,LCD_LINE2, "Hallo Idioten");
-	Wait(3000);
+  TextOut(5,LCD_LINE2, "Hallo Idioten");
+  Wait(3000);
 }
 
 task main()
 {
-	Precedes(draai_rondje, hello_world);
+  Precedes(draai_rondje, hello_world);
   OnFwd(OUT_AC, 50);                  //rij vooruit
   Wait(1000);                         //wacht 1 seconde
 }
