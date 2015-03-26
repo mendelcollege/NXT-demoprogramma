@@ -1,12 +1,11 @@
 /*
-		standaardprogramma voor de follows functie
-		Lees eerst task.nxc
-		door: Bram Mak
-		Eerst worden de tasks draai_rondje en hello_world tegelijkertijd uitgevoerd.
-		Als er een van de twee (draai_rondje in dit geval) klaar is begint task main.
-		Je kunt maar 1 keer Follows in een task hebben.
-		De positie maakt niet uit. (dacht ik, moet ik nog testen)
-*/
+ * standaardprogramma voor de follows functie
+ * Lees eerst task.nxc
+ * Eerst worden de tasks draai_rondje en hello_world tegelijkertijd uitgevoerd.
+ * Als er een van de twee (draai_rondje in dit geval) klaar is begint task main.
+ * Je kunt maar 1 keer Follows in een task hebben.
+ * De positie maakt niet uit. (dacht ik, moet ik nog testen)
+ */
 
 
 task draai_rondje()
@@ -19,13 +18,13 @@ task draai_rondje()
 
 task hello_world()
 {
-	TextOut(5,LCD_LINE2, "Hallo Idioten");
-	Wait(3000);
+  TextOut(5,LCD_LINE2, "Hallo");
+  Wait(3000);
 }
 
 task main()
 {
-	Follows(draai_rondje, hello_world);
+  Follows(draai_rondje, hello_world);
   OnFwd(OUT_AC, 50);                  //rij vooruit
   Wait(1000);                         //wacht 1 seconde
 }
