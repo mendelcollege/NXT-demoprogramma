@@ -1,5 +1,5 @@
 /*
- * standaardprogramma voor de ultrasone tijdtikker
+ * standaardprogramma voor de tijdtikker
  */
 
 task main()
