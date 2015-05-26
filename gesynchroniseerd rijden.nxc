@@ -4,6 +4,7 @@
  * Op deze manier kan hij rechter rijden dan normaal.
  *
  * Let op, dit werkt niet in een loop, alleen met een Wait() of Until() functie.
+ * (omdat hij altijd beide motoren op de aangegeven snelheid aanzet als OnFwdSync() aangeroepen word)
  */ 
 
 task main()
