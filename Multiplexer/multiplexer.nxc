@@ -15,6 +15,12 @@ task main ()
 {
   byte afstand = 0;                                 //maak variable voor sensorwaarde
   SetSensor(S1, SENSOR_LOWSPEED);                   //start multiplexer (let op: SENSOR_LOWSPEED moet voor elke  soort sensor)
+  if(!HTSMUXscanPorts(S1))
+  {
+    // Scan failed, handle the error
+    TextOut(0, LCD_LINE1, "Scan failed!");
+    Stop(true);
+  }
   while (true)                                      //start oneindige loop
   {
     afstand = smuxSensorLegoUS(msensor_S1_1);       //geef "afstand" de waarde van de afstandsensor op poort 1
